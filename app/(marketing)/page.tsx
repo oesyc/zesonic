@@ -28,7 +28,7 @@ const HomePage = () => {
                 </button>
             </div>
             <div className="flex w-[90%] items-center justify-center px-5">
-                
+                <div><AnimatedSection /></div>
             </div>
             <div>
                 <InfoStarter/>
