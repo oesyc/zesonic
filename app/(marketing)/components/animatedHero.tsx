@@ -2,6 +2,12 @@
 import React, { useEffect, useState, useRef } from "react";
 import Head from "next/head";
 import { motion } from "framer-motion";
+import dynamic from "next/dynamic";
+
+// ✅ Dynamically Import Chart.js Components (Fix SSR Issue)
+const Line = dynamic(() => import("react-chartjs-2").then((mod) => mod.Line), { ssr: false });
+const Doughnut = dynamic(() => import("react-chartjs-2").then((mod) => mod.Doughnut), { ssr: false });
+
 import {
   Chart as ChartJS,
   CategoryScale,
@@ -13,7 +19,6 @@ import {
   Legend,
   Filler,
 } from "chart.js";
-import { Line, Doughnut } from "react-chartjs-2";
 
 // Register ChartJS components
 ChartJS.register(CategoryScale, LinearScale, PointElement, LineElement, ArcElement, Tooltip, Legend, Filler);
@@ -65,6 +70,7 @@ export default function AnimatedSection() {
       duration: 2000, // 2 sec animation
     },
     maintainAspectRatio: false,
+    responsive: true,
   };
 
   // Doughnut chart data
@@ -120,8 +126,8 @@ export default function AnimatedSection() {
         <meta name="description" content="Interactive dashboard with animations" />
       </Head>
 
-      <div className="w-full mx-auto relative overflow-hidden rounded-xl shadow-2xl h-[500px] bg-[#1e1836]">
-        <div className="grid grid-cols-4 gap-4 p-6">
+      <div className="w-full mx-auto relative overflow-hidden rounded-xl shadow-2xl h-auto bg-[#1e1836] p-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
           {/* Performance Chart */}
           <div className="col-span-2 bg-[#1a1530] rounded-lg p-4 shadow-md">
             <h3 className="text-white text-lg font-semibold mb-3">Performance Overview</h3>
