@@ -1,36 +1,36 @@
 import React from 'react';
 
-function Intellegence() {
+function Intelligence() {
   return (
-    <div className="min-h-screen   text-white flex flex-col items-center justify-center p-6">
+    <div className="min-h-screen text-white flex flex-col items-center justify-center p-4 md:p-6">
       {/* Header section with purple accent and main title */}
-      <div className="text-center mb-12 max-w-4xl">
+      <div className="text-center mb-8 md:mb-12 max-w-4xl px-4">
         {/* Purple dot and line similar to the first component */}
-        <div className="flex items-center justify-center mb-6">
-          <div className="h-2 w-8 rounded-full bg-purple-500 mr-2"></div>
+        <div className="flex items-center justify-center mb-4 md:mb-6">
+          <div className="h-2 w-6 md:w-8 rounded-full bg-purple-500 mr-2"></div>
           <div className="h-2 w-2 rounded-full bg-purple-500"></div>
         </div>
         
         {/* Main heading */}
-        <h1 className="text-4xl md:text-5xl lg:text-6xl font-normal leading-tight mb-6">
+        <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-normal leading-tight mb-4 md:mb-6">
           The Terzo Financial Intelligence Platform
         </h1>
         
         {/* Subtitle */}
-        <p className="text-xl text-gray-400 mt-4">
+        <p className="text-lg md:text-xl text-gray-400 mt-2 md:mt-4">
           Modernize the way you manage, forecast, and understand your Enterprise spend.
         </p>
       </div>
       
       {/* Three feature cards */}
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 w-full max-w-6xl mb-16">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 md:gap-6 w-full max-w-6xl mb-8 md:mb-16 px-4">
         {/* Card 1 - Centralize contracts */}
-        <div className="bg-purple-900/40 rounded-lg p-10 flex flex-col items-center text-center">
+        <div className="bg-purple-900/40 rounded-lg p-6 md:p-10 flex flex-col items-center text-center">
           {/* Icon */}
-          <div className="mb-8 relative">
+          <div className="mb-6 md:mb-8 relative">
             {/* Dollar sign circle */}
-            <div className="h-20 w-20 rounded-full bg-purple-300/20 flex items-center justify-center">
-              <span className="text-2xl text-purple-300">$</span>
+            <div className="h-16 md:h-20 w-16 md:w-20 rounded-full bg-purple-300/20 flex items-center justify-center">
+              <span className="text-xl md:text-2xl text-purple-300">$</span>
             </div>
             {/* Gears around the circle */}
             <div className="absolute -top-2 -left-4">
@@ -46,26 +46,26 @@ function Intellegence() {
               </svg>
             </div>
             {/* Curved arrow */}
-            <svg className="absolute -top-4 -right-4" width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <svg className="absolute -top-4 -right-4 w-8 h-8 md:w-10 md:h-10" width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M4 4C4.93464 4.93464 5.74038 5.74038 6.5 6.5C10.2843 10.2843 13.5 12 20 12" stroke="#9F7AEA" strokeWidth="1"/>
               <path d="M20 7V12H15" stroke="#9F7AEA" strokeWidth="1"/>
             </svg>
           </div>
           
           {/* Title */}
-          <h2 className="text-2xl font-medium mb-3">Centralize contracts</h2>
+          <h2 className="text-xl md:text-2xl font-medium mb-2 md:mb-3">Centralize contracts</h2>
           
           {/* Description */}
           <p className="text-gray-400">Aggregate financial data</p>
         </div>
         
         {/* Card 2 - Link invoices */}
-        <div className="bg-blue-900/40 rounded-lg p-10 flex flex-col items-center text-center">
+        <div className="bg-blue-900/40 rounded-lg p-6 md:p-10 flex flex-col items-center text-center">
           {/* Icon */}
-          <div className="mb-8 relative">
+          <div className="mb-6 md:mb-8 relative">
             {/* Search and slider */}
-            <div className="h-20 w-20 flex items-center justify-center">
-              <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <div className="h-16 md:h-20 w-16 md:w-20 flex items-center justify-center">
+              <svg width="36" height="36" className="md:w-12 md:h-12" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M21 10H3" stroke="#90CDF4" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                 <path d="M21 6H3" stroke="#90CDF4" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                 <path d="M21 14H3" stroke="#90CDF4" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
@@ -84,19 +84,19 @@ function Intellegence() {
           </div>
           
           {/* Title */}
-          <h2 className="text-2xl font-medium mb-3">Link invoices</h2>
+          <h2 className="text-xl md:text-2xl font-medium mb-2 md:mb-3">Link invoices</h2>
           
           {/* Description */}
-          <p className="text-gray-400">Extract critical data automatically<br />and accurately</p>
+          <p className="text-gray-400">Extract critical data automatically<br className="hidden sm:block" /> and accurately</p>
         </div>
         
         {/* Card 3 - Extract metadata */}
-        <div className="bg-yellow-900/30 rounded-lg p-10 flex flex-col items-center text-center">
+        <div className="bg-yellow-900/30 rounded-lg p-6 md:p-10 flex flex-col items-center text-center sm:col-span-2 md:col-span-1">
           {/* Icon */}
-          <div className="mb-8 relative">
-            <div className="h-20 w-20 flex items-center justify-center">
+          <div className="mb-6 md:mb-8 relative">
+            <div className="h-16 md:h-20 w-16 md:w-20 flex items-center justify-center">
               {/* Gauge and chart */}
-              <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <svg width="36" height="36" className="md:w-12 md:h-12" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <circle cx="12" cy="12" r="8" stroke="#D6BCFA" strokeWidth="2"/>
                 <path d="M12 8V12L15 15" stroke="#D6BCFA" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                 <path d="M16 18L20 22" stroke="#D6BCFA" strokeWidth="2" strokeLinecap="round"/>
@@ -109,20 +109,20 @@ function Intellegence() {
           </div>
           
           {/* Title */}
-          <h2 className="text-2xl font-medium mb-3">Extract metadata</h2>
+          <h2 className="text-xl md:text-2xl font-medium mb-2 md:mb-3">Extract metadata</h2>
           
           {/* Description */}
-          <p className="text-gray-400">Search, sort and report with analytics<br />on top of your data</p>
+          <p className="text-gray-400">Search, sort and report with analytics<br className="hidden sm:block" /> on top of your data</p>
         </div>
       </div>
       
       {/* Bottom call to action */}
-      <div className="text-center max-w-3xl">
-        <h2 className="text-3xl md:text-4xl font-normal mb-2">Don't just track your expenses.</h2>
-        <h2 className="text-3xl md:text-4xl font-normal text-purple-400">Understand your expenses.</h2>
+      <div className="text-center max-w-3xl px-4">
+        <h2 className="text-2xl sm:text-3xl md:text-4xl font-normal mb-2">Don't just track your expenses.</h2>
+        <h2 className="text-2xl sm:text-3xl md:text-4xl font-normal text-purple-400">Understand your expenses.</h2>
       </div>
     </div>
   );
 }
 
-export default Intellegence;
+export default Intelligence;
